@@ -77,7 +77,7 @@ let package = Package(
             dependencies: [
                 .product(name: "Crypto", package: "swift-crypto"),
                 .product(name: "MnemonicSwift", package: "MnemonicSwift"),
-                .product(name: "secp256k1", package: "secp256k1.swift"),
+                .product(name: "secp256k1", package: "secp256k1.swift", moduleAliases: ["secp256k1": "Secp256k1Swift"]),
                 .product(name: "CryptoSwift", package: "cryptoswift"),
                 "Types",
                 "BCS",
@@ -98,7 +98,7 @@ let package = Package(
             name: "BIP32",
             dependencies: [
                 .product(name: "Crypto", package: "swift-crypto"),
-                .product(name: "secp256k1", package: "secp256k1.swift")
+                .product(name: "secp256k1", package: "secp256k1.swift", moduleAliases: ["secp256k1": "Secp256k1Swift"])
             ]
         ),
         .target(
